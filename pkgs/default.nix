@@ -6911,9 +6911,9 @@ inherit (pkgs) mesa;};
          , conduit, constraints, containers, cpphs, cryptonite, data-default
          , deepseq, directory, dns, ed25519, ekg-core, ekg-statsd, ekg-wai
          , ether, exceptions, extra, filelock, filepath, fmt, formatting
-         , generic-arbitrary, half, hashable, hspec, lens, log-warper
-         , lrucache, memory, mmorph, monad-control, MonadRandom, mtl
-         , neat-interpolation, network-transport, network-transport-tcp
+         , generic-arbitrary, half, hashable, hspec, kademlia, lens
+         , log-warper, lrucache, memory, mmorph, monad-control, MonadRandom
+         , mtl, neat-interpolation, network-transport, network-transport-tcp
          , optparse-applicative, parsec, plutus-prototype, pvss, QuickCheck
          , random, reflection, resourcet, rocksdb-haskell-ng
          , safe-exceptions, safecopy, serokell-util, servant, servant-server
@@ -6935,9 +6935,9 @@ inherit (pkgs) mesa;};
              cardano-sl-update cardano-sl-util cborg cereal conduit constraints
              containers cpphs cryptonite data-default deepseq directory dns
              ed25519 ekg-core ekg-statsd ekg-wai ether exceptions filelock
-             filepath formatting generic-arbitrary half hashable hspec lens
-             log-warper lrucache memory mmorph monad-control MonadRandom mtl
-             neat-interpolation network-transport network-transport-tcp
+             filepath formatting generic-arbitrary half hashable hspec kademlia
+             lens log-warper lrucache memory mmorph monad-control MonadRandom
+             mtl neat-interpolation network-transport network-transport-tcp
              optparse-applicative parsec plutus-prototype pvss QuickCheck random
              reflection resourcet rocksdb-haskell-ng safe-exceptions safecopy
              serokell-util servant servant-server servant-swagger stm systemd
@@ -6997,8 +6997,9 @@ inherit (pkgs) mesa;};
            libraryToolDepends = [ cpphs ];
            executableHaskellDepends = [
              cardano-sl cardano-sl-core cardano-sl-infra cardano-sl-networking
-             cardano-sl-txp cardano-sl-util constraints formatting log-warper
-             network-transport-tcp safe-exceptions temporary universum unix
+             cardano-sl-txp cardano-sl-update cardano-sl-util constraints
+             formatting log-warper network-transport-tcp safe-exceptions
+             temporary universum unix
            ];
            executableToolDepends = [ cpphs ];
            testHaskellDepends = [
