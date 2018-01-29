@@ -7317,14 +7317,14 @@ inherit (pkgs) mesa;};
          , cardano-report-server, cardano-sl-binary, cardano-sl-core
          , cardano-sl-crypto, cardano-sl-db, cardano-sl-networking
          , cardano-sl-util, conduit, containers, cpphs, directory, dns
-         , ekg-core, ether, exceptions, filepath, formatting
-         , generic-arbitrary, hashable, http-client, http-client-tls
-         , iproute, kademlia, lens, log-warper, lzma-conduit, monad-control
-         , mtl, network-info, network-transport, network-transport-tcp
-         , optparse-applicative, parsec, QuickCheck, reflection
-         , safe-exceptions, serokell-util, stdenv, stm, tagged, tar, text
-         , text-format, time, time-units, transformers, universum, unix
-         , unordered-containers, yaml
+         , ekg-core, ekg-statsd, ekg-wai, ether, exceptions, filepath
+         , formatting, generic-arbitrary, hashable, http-client
+         , http-client-tls, iproute, kademlia, lens, log-warper
+         , lzma-conduit, monad-control, mtl, network-info, network-transport
+         , network-transport-tcp, optparse-applicative, parsec, QuickCheck
+         , reflection, safe-exceptions, serokell-util, stdenv, stm, tagged
+         , tar, text, text-format, time, time-units, transformers, universum
+         , unix, unordered-containers, yaml
          }:
          mkDerivation {
            pname = "cardano-sl-infra";
@@ -7334,13 +7334,13 @@ inherit (pkgs) mesa;};
              aeson base base64-bytestring bytestring cardano-report-server
              cardano-sl-binary cardano-sl-core cardano-sl-crypto cardano-sl-db
              cardano-sl-networking cardano-sl-util conduit containers directory
-             dns ekg-core ether exceptions filepath formatting generic-arbitrary
-             hashable http-client http-client-tls iproute kademlia lens
-             log-warper lzma-conduit monad-control mtl network-info
-             network-transport network-transport-tcp optparse-applicative parsec
-             QuickCheck reflection safe-exceptions serokell-util stm tagged tar
-             text text-format time time-units transformers universum unix
-             unordered-containers yaml
+             dns ekg-core ekg-statsd ekg-wai ether exceptions filepath
+             formatting generic-arbitrary hashable http-client http-client-tls
+             iproute kademlia lens log-warper lzma-conduit monad-control mtl
+             network-info network-transport network-transport-tcp
+             optparse-applicative parsec QuickCheck reflection safe-exceptions
+             serokell-util stm tagged tar text text-format time time-units
+             transformers universum unix unordered-containers yaml
            ];
            libraryToolDepends = [ cpphs ];
            doHaddock = false;
